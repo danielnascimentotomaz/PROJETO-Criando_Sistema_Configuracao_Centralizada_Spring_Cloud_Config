@@ -6,3 +6,9 @@ spring:
     name: config-client
   config:
     import: "configserver:http://localhost:8888" # Apontando para o Config Server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health  # Expondo os endpoints 'refresh' e 'health'
